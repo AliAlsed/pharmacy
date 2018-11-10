@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="nav">
+    <ion-title style="text-align:right">الادويه الخاصه بي</ion-title>
+    <ion-buttons start left>
+      <button ion-button icon-only (click)="add()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngFor="let item of diseaseList" class="card">
+    <img src={{item.image}} style="height: 200px;" class="img" />
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-start clear small (click)="remove(item.id,item.city)">
+            <ion-icon name="trash"></ion-icon>
+            <div>تم ايصال العلاج حذف</div>
+          </button>
+        </ion-col>
+        <ion-col>
+
+        </ion-col>
+        <ion-col center text-center>
+          <button ion-button icon-end clear small (click)="detail(item)">
+            <div>التفاصيل</div>
+            <ion-icon name="bookmark"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

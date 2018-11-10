@@ -1,0 +1,46 @@
+page-register {
+
+
+    ::-webkit-input-placeholder { text-align:right; }
+    ::-webkit-select-placeholder { text-align:right; }
+
+    /* mozilla solution */
+    input:-moz-placeholder { text-align:right; }
+    select:-moz-placeholder { text-align:right; }
+    placeholder{
+      text-align: right
+    }
+      .invalid {
+        border-bottom: 1px solid #FF6153;
+      }
+      .input{
+        border: 1px solid #487EB0;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+      .login-logo {
+        flex: 0;
+      }
+
+      .login-form {
+          flex: 1;
+          margin-top: 45px;
+
+      }
+
+      .create-account {
+        color: #fff;
+        text-decoration: underline;
+        background: none;
+      }
+
+      .login-button {
+        padding: 10px;
+        font-size: 1.0em;
+      }
+      button{
+        padding: 6px;
+        font-size: 20px;
+      }
+}

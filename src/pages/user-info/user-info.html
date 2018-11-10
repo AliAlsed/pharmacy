@@ -1,0 +1,27 @@
+<ion-content text-center >
+  <img src="assets/imgs/6.png" alt="" srcset="" style="margin-top:75px">
+      <form #f="ngForm">
+        <ion-list no-lines>
+        <ion-item class="input">
+          <ion-input type="text" placeholder="ادخل الاسم"  name="name" ngModel required>
+          </ion-input>
+        </ion-item>
+        <ion-item class="select">
+          <ion-select placeholder=" الجنس" ngModel name="gender" style="color:black;text-align: right">
+            <ion-option value="male">ذكر</ion-option>
+            <ion-option value="female">انثى</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder=" العمر" type="number" style="color:black;" name="age" ngModel required>
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="مرض مزمن " type="text" name="disease" ngModel style="color:black;font-size: 20px" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <button ion-button large [disabled]="f.invalid" (click)="add(f)" color="btn">التالي</button>
+        </ion-item>
+      </ion-list>
+      </form>
+</ion-content>

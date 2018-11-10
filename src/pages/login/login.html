@@ -1,0 +1,25 @@
+<ion-content text-center padding>
+  <img src="assets/imgs/3.png" style="margin-top: 90px">
+
+  <ion-list no-lines>
+
+    <ion-item class="input">
+      <ion-input type="Email" placeholder="ادخل البريد الالكتروني الخاص بك" [(ngModel)]="credeintials.email" style="margin-top: 95px"></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <ion-input type="password" placeholder="ادخل الرقم السري" [(ngModel)]="credeintials.password"></ion-input>
+    </ion-item>
+    <ion-item class="input" text-center>
+      <button ion-button block (click)="onSignin()" class="login-button" color="btn" style="padding: 20px">
+        تسجيل
+      </button>
+      <button (click)="reset()" class="create-account" style="margin-top: 5px">
+        <b>اعاده تهيئه الباسورد </b>
+      </button>
+    </ion-item>
+
+  </ion-list>
+
+
+
+</ion-content>

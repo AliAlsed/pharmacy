@@ -1,0 +1,28 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content text-center padding>
+    <img src="assets/imgs/2.png" style="margin-top: 90px">
+    <ion-list no-lines>
+        <ion-item class="input">
+            <ion-input type="Email" placeholder="ادخل البريد الالكتروني الخاص بك" [(ngModel)]="credeintials.email" style="margin-top:145px;"></ion-input>
+        </ion-item>
+        <ion-item class="input">
+            <ion-input type="password" placeholder="ادخل الرقم السري" [(ngModel)]="credeintials.password"></ion-input>
+        </ion-item>
+        <ion-item class="input">
+            <button ion-button full color="btn" (click)="register()" style="padding: 20px;">ان
+                شاء حساب</button>
+        </ion-item>
+        </ion-list>
+
+
+
+
+</ion-content>

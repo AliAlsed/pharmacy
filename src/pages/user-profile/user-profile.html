@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar color="nav">
+    <ion-title style="text-align:center">الملف الشخصي</ion-title>
+    <ion-buttons start left>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div class="profile-image">
+  <img src="{{profileImage}}" *ngIf="profileImage"/>
+  </div>
+  <div class="profile-image" (click)="chooseimage()" *ngIf="!profileImage">
+      <img src="{{addImage}}">
+    </div>
+  <ion-item-group>
+    <ion-item-divider></ion-item-divider>
+    <ion-item style="color:black;text-align: right;
+    font-family: 'Times New Roman', Times, serif; font-display:inherit">
+      الاسم : {{" "+User.Name}}
+    </ion-item>
+    <ion-item style="color:black;text-align: right;
+    font-family: 'Times New Roman', Times, serif; font-display:inherit">
+      العمر : {{" "+User.age}}
+    </ion-item>
+    <ion-item style="color:black;text-align: right;
+    font-family: 'Times New Roman', Times, serif; font-display:inherit;">
+      المرض المزمن : {{" "+User.disease}}
+    </ion-item>
+  </ion-item-group>
+
+
+
+</ion-content>

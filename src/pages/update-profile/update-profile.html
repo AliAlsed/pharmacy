@@ -1,0 +1,73 @@
+<!--
+  Generated template for the UpdateProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+  <ion-navbar color="nav">
+    <ion-title style="text-align:right"> تحديث الملف الشخصي</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="pop()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content text-center>
+  <div style="margin-left: 15%">
+    <img src="assets/imgs/5.png" style="margin-top: 65px;">
+  </div>
+  <form #f="ngForm">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item style="margin-top: 15px;">
+            <ion-input type="text" name="Name" ngModel required [value]="User.name" placeholder="ادخل اسمك "></ion-input>
+          </ion-item>
+          <ion-item style="margin-top: 15px;">
+            <ion-input type="number" name="age" ngModel required [value]="User.age" placeholder="ادخل عمرك"></ion-input>
+          </ion-item>
+          <ion-item style="margin-top: 15px;">
+            <ion-select name="city" placeholder=" محافضتك" ngModel style="color:black;
+             text-align: right" required>
+              <ion-option value="Baghdad">بغداد</ion-option>
+              <ion-option value="Anbar">الأنبار</ion-option>
+              <ion-option value="Babylon">بابل</ion-option>
+              <ion-option value="Basra">البصرة</ion-option>
+              <ion-option value="Halabja">حلبجة</ion-option>
+              <ion-option value="Erbil">اربيل</ion-option>
+              <ion-option value="Dohuk">دهوك</ion-option>
+              <ion-option value="Qadisiyah">القادسية</ion-option>
+              <ion-option value="Diyala">ديالى</ion-option>
+              <ion-option value="DhiQar">ذي قار</ion-option>
+              <ion-option value="Sulaymaniyah">السليمانية</ion-option>
+              <ion-option value="Salahaddin">صلاح الدين</ion-option>
+              <ion-option value="Kirkuk">كركوك</ion-option>
+              <ion-option value="Karbala">كربلاء</ion-option>
+              <ion-option value="Muthanna">المثنى</ion-option>
+              <ion-option value="Maysan">ميسان</ion-option>
+              <ion-option value="Najaf">النجف</ion-option>
+              <ion-option value="Nineveh">نينوى</ion-option>
+              <ion-option value="Wasit">واسط</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item style="margin-top: 15px;">
+            <ion-input type="text" name="disease" placeholder="المرض" ngModel [value]="User.disease" required></ion-input>
+          </ion-item>
+
+        </ion-list>
+        <button ion-button [disabled]="f.invalid" color="btn" type="submit" block (click)="update(f)" class="login-button" style="margin-top: 5px;">
+          <b>تحديث البروفايل</b>
+        </button>
+
+      </ion-col>
+    </ion-row>
+
+  </form>
+</ion-content>

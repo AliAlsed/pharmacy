@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+page-login {
+
+    ::-webkit-input-placeholder { text-align:right; }
+    ::-webkit-select-placeholder { text-align:right; }
+
+    /* mozilla solution */
+    input:-moz-placeholder { text-align:right; }
+    select:-moz-placeholder { text-align:right; }
+    placeholder{
+      text-align: right
+    }
+      .invalid {
+        border-bottom: 1px solid #FF6153;
+      }
+
+
+
+
+      .create-account {
+        color: #95989A;
+        text-decoration: underline;
+        background: none;
+        font-size: 16px;
+      }
+      .input{
+        border: 1px solid #487EB0;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+
+
+
+  }
+
+
+
+
